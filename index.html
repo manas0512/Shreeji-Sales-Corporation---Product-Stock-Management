@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreeji Sales Corporation - Product Stock Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shreeji Sales Corporation</h1>
+        <div class="form-container">
+            <h2>Add Products</h2>
+            <label for="product">Product Name:</label>
+            <input type="text" id="product" placeholder="Enter product name">
+            <label for="quantity">Quantity Added:</label>
+            <input type="number" id="quantity" placeholder="Enter quantity">
+            <button onclick="addProduct()">Add Product</button>
+        </div>
+        <div class="form-container">
+            <h2>Sell Products</h2>
+            <label for="soldProduct">Product Name:</label>
+            <input type="text" id="soldProduct" placeholder="Enter product name">
+            <label for="quantitySold">Quantity Sold:</label>
+            <input type="number" id="quantitySold" placeholder="Enter quantity sold">
+            <button onclick="sellProduct()">Sell Product</button>
+        </div>
+        <div class="stock-container">
+            <h2>Product List</h2>
+            <ul id="productList"></ul>
+        </div>
+        <div class="stock-summary">
+            <h2>Stock Summary</h2>
+            <button onclick="calculateRemainingStock()">Calculate Remaining Stock</button>
+            <ul id="remainingStockList"></ul>
+            <button onclick="downloadReport()">Download Report as PDF</button>
+        </div>
+        <div class="reset-container">
+            <button onclick="resetAll()">Reset All</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
